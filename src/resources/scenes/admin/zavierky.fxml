@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sk.shopking.controllers.CFXMLZavierky">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <fx:include fx:id="homeMenu" source="hlavneMenu.fxml" />
+         </left>
+         <center>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Denné závierky">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane layoutX="-247.0" layoutY="69.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <top>
+                                    <ToolBar prefHeight="162.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+                                       <items>
+                                          <BorderPane prefHeight="152.0">
+                                             <bottom>
+                                                <Label styleClass="zahlavieText" text="Denné závierky" BorderPane.alignment="CENTER">
+                                                   <BorderPane.margin>
+                                                      <Insets />
+                                                   </BorderPane.margin>
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </bottom>
+                                             <center>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="127.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#jbShowDennaZavierkaAction" text="Zobraziť závierku">
+                                                         <graphic>
+                                                            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../images/icons8-bulleted-list-100.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#jbExportDenneAction" text="Exportovať">
+                                                         <graphic>
+                                                            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../images/icons8-xls-export-100.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#jbObnovitDenneZavierky" text="Obnoviť">
+                                                         <graphic>
+                                                            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../images/icons8-refresh-100.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </center>
+                                          </BorderPane>
+                                          <Separator orientation="VERTICAL" prefHeight="117.0" prefWidth="0.0" />
+                                          <BorderPane prefHeight="152.0">
+                                             <bottom>
+                                                <Label styleClass="zahlavieText" text="Zobraziť" BorderPane.alignment="CENTER">
+                                                   <BorderPane.margin>
+                                                      <Insets />
+                                                   </BorderPane.margin>
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </bottom>
+                                             <center>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="127.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="jbVybratDatum" alignment="CENTER" contentDisplay="TOP" disable="true" graphicTextGap="10.0" mnemonicParsing="false" onAction="#jbVybratDatumAction" text="Vybrať podľa&#10;dátumu" textAlignment="CENTER">
+                                                         <graphic>
+                                                            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../images/icons8-planner-100.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <ToggleButton fx:id="jtbZavierkyPokladnikov" contentDisplay="TOP" mnemonicParsing="false" onAction="#jtbZavierkyPokladnikovAction" text="Zobraziť závierky&#10;pokladníkov" textAlignment="CENTER">
+                                                         <graphic>
+                                                            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../images/icons8-user-menu-male-100.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </ToggleButton>
+                                                   </children>
+                                                </HBox>
+                                             </center>
+                                          </BorderPane>
+                                          <Separator orientation="VERTICAL" prefHeight="117.0" prefWidth="0.0" />
+                                       </items>
+                                    </ToolBar>
+                                 </top>
+                                 <center>
+                                    <StackPane fx:id="jspVyberDennejZavierky" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <TableView fx:id="jtDenneZavierky" prefHeight="200.0" prefWidth="200.0" visible="false">
+                                             <columns>
+                                                <TableColumn fx:id="cDatumD" prefWidth="152.0" text="Dátum" />
+                                                <TableColumn fx:id="cCasD" prefWidth="125.0" text="Čas" />
+                                                <TableColumn fx:id="cPokladnikD" minWidth="0.0" prefWidth="193.0" text="Pokladník" />
+                                                <TableColumn fx:id="cCelkovyObratD" prefWidth="238.0" text="Celkový obrat (€)" />
+                                                <TableColumn fx:id="cObrat20D" prefWidth="220.0" text="Obrat v sadzbe 20% (€)" />
+                                                <TableColumn fx:id="cObrat10D" prefWidth="220.0" text="Obrat v sadzbe 10% (€)" />
+                                                <TableColumn fx:id="cZapornyObratD" prefWidth="185.0" text="Záporný obrat (€)" />
+                                             </columns>
+                                             <StackPane.margin>
+                                                <Insets bottom="50.0" left="100.0" right="100.0" top="50.0" />
+                                             </StackPane.margin>
+                                          </TableView>
+                                          <TableView fx:id="jtDenneZavierkySpolu" prefHeight="564.0" prefWidth="1027.0">
+                                             <columns>
+                                                <TableColumn fx:id="cDatumDS" prefWidth="152.0" text="Dátum" />
+                                                <TableColumn fx:id="cCelkovyObratDS" prefWidth="238.0" text="Celkový obrat (€)" />
+                                                <TableColumn fx:id="cObrat20DS" prefWidth="220.0" text="Obrat v sadzbe 20% (€)" />
+                                                <TableColumn fx:id="cObrat10DS" prefWidth="220.0" text="Obrat v sadzbe 10% (€)" />
+                                                <TableColumn fx:id="cZapornyObratDS" prefWidth="185.0" text="Záporný obrat (€)" />
+                                             </columns>
+                                             <StackPane.margin>
+                                                <Insets bottom="50.0" left="100.0" right="100.0" top="50.0" />
+                                             </StackPane.margin>
+                                          </TableView>
+                                       </children>
+                                    </StackPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Mesačné závierky">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane layoutX="-247.0" layoutY="69.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <TableView fx:id="jtMesacneZavierky" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <columns>
+                                          <TableColumn fx:id="cDatumM" prefWidth="220.0" text="Dátum a čas závierky" />
+                                          <TableColumn fx:id="cOdKedyM" prefWidth="160.0" text="Obdobie od" />
+                                          <TableColumn fx:id="cDoKedyM" prefWidth="160.0" text="Obdobie do" />
+                                          <TableColumn fx:id="cCelkovyObratM" prefWidth="220.0" text="Celkový obrat (€)" />
+                                       </columns>
+                                       <BorderPane.margin>
+                                          <Insets bottom="50.0" left="100.0" right="100.0" top="50.0" />
+                                       </BorderPane.margin>
+                                    </TableView>
+                                 </center>
+                                 <top>
+                                    <ToolBar prefHeight="162.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+                                       <items>
+                                          <BorderPane prefHeight="152.0">
+                                             <bottom>
+                                                <Label styleClass="zahlavieText" text="Mesačné závierky" BorderPane.alignment="CENTER">
+                                                   <BorderPane.margin>
+                                                      <Insets />
+                                                   </BorderPane.margin>
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </bottom>
+                                             <center>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="127.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#jbNewMesacnaZavierkaAction" text="Vytvoriť novú">
+                                                         <graphic>
+                                                            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../images/icons8-plus-100.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#jbShowMesacnaZavierkaAction" text="Zobraziť závierku">
+                                                         <graphic>
+                                                            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../images/icons8-bulleted-list-100.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#jbExportMesacneAction" text="Exportovať">
+                                                         <graphic>
+                                                            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../images/icons8-xls-export-100.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </center>
+                                          </BorderPane>
+                                          <Separator orientation="VERTICAL" prefHeight="117.0" prefWidth="0.0" />
+                                       </items>
+                                    </ToolBar>
+                                 </top>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                </Tab>
+                  <Tab text="Ročné závierky">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane layoutX="-247.0" layoutY="69.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <TableView fx:id="jtRocneZavierky" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <BorderPane.margin>
+                                          <Insets bottom="50.0" left="100.0" right="100.0" top="50.0" />
+                                       </BorderPane.margin>
+                                       <columns>
+                                          <TableColumn fx:id="cDatumR" prefWidth="220.0" text="Dátum a čas závierky" />
+                                          <TableColumn fx:id="cOdKedyR" prefWidth="160.0" text="Obdobie od" />
+                                          <TableColumn fx:id="cDoKedyR" prefWidth="160.0" text="Obdobie do" />
+                                          <TableColumn fx:id="cCelkovyObratR" prefWidth="220.0" text="Celkový obrat (€)" />
+                                       </columns>
+                                    </TableView>
+                                 </center>
+                                 <top>
+                                    <ToolBar prefHeight="162.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+                                       <items>
+                                          <BorderPane prefHeight="152.0">
+                                             <bottom>
+                                                <Label styleClass="zahlavieText" text="Ročné závierky" BorderPane.alignment="CENTER">
+                                                   <BorderPane.margin>
+                                                      <Insets />
+                                                   </BorderPane.margin>
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </bottom>
+                                             <center>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="127.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#jbNewRocnaZavierkaAction" text="Vytvoriť novú">
+                                                         <graphic>
+                                                            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../images/icons8-plus-100.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#jbShowRocnaZavierkaAction" text="Zobraziť závierku">
+                                                         <graphic>
+                                                            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../images/icons8-bulleted-list-100.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#jbExportRocneAction" text="Exportovať">
+                                                         <graphic>
+                                                            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../images/icons8-xls-export-100.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </center>
+                                          </BorderPane>
+                                          <Separator orientation="VERTICAL" prefHeight="117.0" prefWidth="0.0" />
+                                       </items>
+                                    </ToolBar>
+                                 </top>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

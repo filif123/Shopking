@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/mysqlconnector.jar"/>
+	<classpathentry kind="lib" path="lib/jSerialComm-2.5.2.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://fazecast.github.io/jSerialComm/javadoc"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/poi-4.1.1/poi-4.1.1.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/Users/filip/Disk%20Google/ShopKing/lib/poi-4.1.1/docs/apidocs/dev/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/poi-4.1.1/poi-examples-4.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/poi-4.1.1/poi-excelant-4.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/poi-4.1.1/poi-ooxml-4.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/poi-4.1.1/poi-ooxml-schemas-4.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/poi-4.1.1/poi-scratchpad-4.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/poi-4.1.1/lib/activation-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/poi-4.1.1/lib/commons-codec-1.13.jar"/>
+	<classpathentry kind="lib" path="lib/poi-4.1.1/lib/commons-collections4-4.4.jar"/>
+	<classpathentry kind="lib" path="lib/poi-4.1.1/lib/commons-compress-1.19.jar"/>
+	<classpathentry kind="lib" path="lib/poi-4.1.1/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/poi-4.1.1/lib/commons-math3-3.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/poi-4.1.1/lib/jaxb-api-2.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/poi-4.1.1/lib/jaxb-core-2.3.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/poi-4.1.1/lib/jaxb-impl-2.3.2.jar"/>
+	<classpathentry kind="lib" path="lib/poi-4.1.1/lib/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="lib/poi-4.1.1/lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="lib/poi-4.1.1/ooxml-lib/curvesapi-1.06.jar"/>
+	<classpathentry kind="lib" path="lib/poi-4.1.1/ooxml-lib/xmlbeans-3.1.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-io-2.6.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/filip/Disk%20Google/ShopKing/lib/commons-io-2.6-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/jmetro-8.6.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/ShopKing/lib/jmetro-8.6-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

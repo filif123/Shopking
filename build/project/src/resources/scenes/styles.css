@@ -1,0 +1,45 @@
+.hoverButton:hover{
+	-fx-background-color: #000099;
+}
+/* Menu pokladnik */
+.hoverPokladnikMenuRed:hover{
+	-fx-background-color: derive(red,-20%) !important;
+}
+
+.hoverPokladnikMenuOrange:hover{
+	-fx-background-color: derive(#ff6600,-20%) !important;
+}
+
+.hoverPokladnikMenuBlue:hover{
+	-fx-background-color: derive( #0066cc,-20%) !important;
+}
+
+.hoverPokladnikMenuViolet:hover{
+	-fx-background-color: derive(#993399,-20%) !important;
+}
+
+.hoverPokladnikMenuGreen:hover{
+	-fx-background-color: derive(green,-20%) !important;
+}
+
+.hoverPokladnikMenuBrown:hover{
+	-fx-background-color: derive(#996633,-20%) !important;
+}
+
+/* White Label */
+.whiteLabel{
+	-fx-text-fill:white;
+}
+
+/* Black Label */
+.blackLabel{
+	-fx-text-fill:black;
+}
+
+.hoverButtonHome:hover{
+	-fx-background-color:  #0066cc !important;
+}
+
+.hoverButtonHome:hover .blackLabel{
+	-fx-text-fill:white;
+}

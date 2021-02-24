@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sk.shopking.controllers.CFXMLUsers">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <fx:include fx:id="homeMenu" source="hlavneMenu.fxml" />
+         </left>
+         <center>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Používatelia">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <TableView fx:id="jtUsers" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                      <columns>
+                                          <TableColumn fx:id="cMeno" prefWidth="216.0" text="Meno" />
+                                        <TableColumn fx:id="cPriezvisko" prefWidth="223.0" text="Priezvisko" />
+                                          <TableColumn fx:id="cNickname" prefWidth="199.0" text="Používateľské meno" />
+                                          <TableColumn fx:id="cUserType" prefWidth="190.0" text="Typ používateľa" />
+                                      </columns>
+                                       <BorderPane.margin>
+                                          <Insets bottom="50.0" left="200.0" right="200.0" top="50.0" />
+                                       </BorderPane.margin>
+                                    </TableView>
+                                 </center>
+                                 <top>
+                                    <ToolBar prefHeight="162.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+                                       <items>
+                                          <BorderPane prefHeight="147.0">
+                                             <bottom>
+                                                <Label styleClass="zahlavieText" text="Súbor" BorderPane.alignment="CENTER">
+                                                   <BorderPane.margin>
+                                                      <Insets />
+                                                   </BorderPane.margin>
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </bottom>
+                                             <center>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="127.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#jbSaveAction" text="Uložiť" textAlignment="CENTER">
+                                                         <graphic>
+                                                            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../images/icons8-save-100.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <tooltip>
+                                                            <Tooltip text="Uložiť (Ctrl+S)" />
+                                                         </tooltip>
+                                                      </Button>
+                                                      <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#jbObnovitAction" text="Obnoviť">
+                                                         <graphic>
+                                                            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../images/icons8-refresh-100.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <tooltip>
+                                                            <Tooltip text="Obnoviť zmeny (F5)" />
+                                                         </tooltip>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </center>
+                                          </BorderPane>
+                                          <Separator orientation="VERTICAL" prefHeight="117.0" prefWidth="0.0" />
+                                          <BorderPane prefHeight="147.0">
+                                             <bottom>
+                                                <Label styleClass="zahlavieText" text="Práca s používateľmi" BorderPane.alignment="CENTER">
+                                                   <BorderPane.margin>
+                                                      <Insets />
+                                                   </BorderPane.margin>
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </bottom>
+                                             <center>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="127.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#jbAddUserAction" text="Pridať používateľa">
+                                                         <graphic>
+                                                            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../images/icons8-add-user-male-100.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <Button fx:id="jbDeleteUser1" alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#jbDeleteUserAction" text="Odstrániť používateľov">
+                                                         <graphic>
+                                                            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../images/icons8-denied-100.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#jbEditUserAction" text="Zmeniť používateľov">
+                                                         <graphic>
+                                                            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../images/icons8-registration-100.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </center>
+                                          </BorderPane>
+                                          <Separator orientation="VERTICAL" prefHeight="117.0" prefWidth="0.0" />
+                                          <BorderPane prefHeight="147.0">
+                                             <bottom>
+                                                <Label styleClass="zahlavieText" text="Zobraziť" BorderPane.alignment="CENTER">
+                                                   <BorderPane.margin>
+                                                      <Insets />
+                                                   </BorderPane.margin>
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </bottom>
+                                             <center>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="127.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#jbSearchAction" text="Hľadať">
+                                                         <graphic>
+                                                            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../images/icons8-search-100.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </center>
+                                          </BorderPane>
+                                          <Separator orientation="VERTICAL" prefHeight="117.0" prefWidth="0.0" />
+                                       </items>
+                                    </ToolBar>
+                                 </top>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

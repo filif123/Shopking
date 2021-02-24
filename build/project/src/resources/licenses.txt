@@ -1,0 +1,52 @@
+/*https://www.flaticon.com/authors/smashicons
+https://www.flaticon.com/authors/freepik - card,refresh,shop
+https://www.flaticon.com/authors/recep-kutuk - shutdown
+https://www.flaticon.com/authors/dave-gandy - arrow left
+https://www.flaticon.com/authors/alfredo-hernandez - delete icon*/
+
+
+<a href="https://icons8.com/icon/2969/settings">Settings icon by Icons8</a>
+<a href="https://icons8.com/icon/8119/exit">Exit icon by Icons8</a>
+<a href="https://icons8.com/icon/26217/logout-rounded-left">Logout Rounded Left icon by Icons8</a>
+<a href="https://icons8.com/icon/2800/info">Info icon by Icons8</a>
+<a href="https://icons8.com/icon/2797/home">Home icon by Icons8</a>
+<a href="https://icons8.com/icon/12616/categorize">Categorize icon by Icons8</a>
+<a href="https://icons8.com/icon/89619/fast-moving-consumer-goods">Fast Moving Consumer Goods icon by Icons8</a>
+<a href="https://icons8.com/icon/otugaXy6fWXk/grocery-shelf">Grocery Shelf icon by Icons8</a>
+<a href="https://icons8.com/icon/23265/user">User icon by Icons8</a>
+<a href="https://icons8.com/icon/95773/percentage">Percentage icon by Icons8</a>
+<a href="https://icons8.com/icon/8430/cash-register">Cash Register icon by Icons8</a>
+<a href="https://icons8.com/icon/36830/time-card">Time Card icon by Icons8</a>
+<a href="https://icons8.com/icon/11497/statistics">Statistics icon by Icons8</a>
+<a href="https://icons8.com/icon/8384/shopping-basket">Shopping Basket icon by Icons8</a>
+
+<a href="https://icons8.com/icon/JPJHpQQeCjlA/close-sign">Close Sign icon by Icons8</a>
+<a href="https://icons8.com/icon/CjO5bTMTWW0p/exit">Exit icon by Icons8</a>
+<a href="https://icons8.com/icon/80691/shutdown">Shutdown icon by Icons8</a>
+<a href="https://icons8.com/icon/lZ66lHoqA22V/cash-register">Cash Register icon by Icons8</a>
+<a href="https://icons8.com/icon/0E-fog0n70MI/search-property">Search Property icon by Icons8</a>
+<a href="https://icons8.com/icon/eE0wFHzrhmT2/weight-kg">Weight Kg icon by Icons8</a>
+<a href="https://icons8.com/icon/GPl1s_BlwIqL/counter">Counter icon by Icons8</a>
+<a href="https://icons8.com/icon/0B9gEN_1d4vQ/barcode">Barcode icon by Icons8</a>
+<a href="https://icons8.com/icon/aa7KhTA-fUrm/money">Money icon by Icons8</a>
+<a href="https://icons8.com/icon/7JbKjmqM3gRz/credit-card">Credit Card icon by Icons8</a>
+<a href="https://icons8.com/icon/yYyE0scV36JF/info">Info icon by Icons8</a>
+<a href="https://icons8.com/icon/ps43K8HtbRdK/plus">Plus icon by Icons8</a>
+<a href="https://icons8.com/icon/XxKVC4xk9VFb/minus">Minus icon by Icons8</a>
+<a href="https://icons8.com/icon/ItxCFtd4gw3T/red-card">Red Card icon by Icons8</a> - stravne listky
+
+<a href="https://icons8.com/icon/3N62NpxoF0tf/refresh">Refresh icon by Icons8</a>
+<a href="https://icons8.com/icon/up95k6mQYKvR/save">Save icon by Icons8</a>
+<a href="https://icons8.com/icon/Gz4YZFbMvl9L/save-close">Save Close icon by Icons8</a>
+<a href="https://icons8.com/icon/8cZr8xZlNbXw/edit">Edit icon by Icons8</a>
+<a href="https://icons8.com/icon/jqN_CHf4LQW_/search">Search icon by Icons8</a>
+<a href="https://icons8.com/icon/ofcLuc4sHy-X/warehouse">Warehouse icon by Icons8</a>
+<a href="https://icons8.com/icon/W28azECz06zJ/add-user-male">Add User Male icon by Icons8</a>
+<a href="https://icons8.com/icon/RNys3F6ZPkxX/registration">Registration icon by Icons8</a>ň
+<a href="https://icons8.com/icon/7BJD936d0A41/denied">Denied icon by Icons8</a>
+<a href="https://icons8.com/icon/4QXMmPIgxNVx/discount">Discount icon by Icons8</a>
+
+<a href="https://icons8.com/icon/ZX5_ipvrK42Z/office">Office icon by Icons8</a>
+<a href="https://icons8.com/icon/ZfAhbOWXwqlP/shop">Shop icon by Icons8</a>
+<a href="https://icons8.com/icon/g244p3P0SOH_/cash-register">Cash Register icon by Icons8</a>
+<a href="https://icons8.com/icon/xULJU2OCvbet/open-box">Open Box icon by Icons8</a> - ostatne

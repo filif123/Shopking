@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sk.shopking.controllers.CFXMLAddTovar">
+   <children>
+      <VBox layoutX="163.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="120.0" text="Názov tovaru:">
+                     <HBox.margin>
+                        <Insets left="20.0" right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="jtName" prefHeight="31.0" prefWidth="400.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="120.0" text="Kategória tovaru:">
+                     <HBox.margin>
+                        <Insets left="20.0" right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="jcbCategory" prefHeight="31.0" prefWidth="400.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Jednotka tovaru:">
+                     <HBox.margin>
+                        <Insets left="20.0" right="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="jcbJednotka" prefHeight="31.0" prefWidth="107.0" />
+                  <Label prefHeight="21.0" text="EAN tovaru:">
+                     <HBox.margin>
+                        <Insets left="20.0" right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="jtEAN" prefHeight="31.0" prefWidth="190.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="120.0" text="Jednotková cena:">
+                     <HBox.margin>
+                        <Insets left="20.0" right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="jtCena" prefHeight="31.0" prefWidth="150.0" />
+                  <Label text="€">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label text="DPH:">
+                     <HBox.margin>
+                        <Insets left="60.0" right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="jcbDPH" prefHeight="31.0" prefWidth="120.0" />
+                  <Label text="\%">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button defaultButton="true" mnemonicParsing="false" onAction="#jbSaveAction" text="Pridať tovar" />
+                  <Button cancelButton="true" mnemonicParsing="false" onAction="#jbStornoAction" text="Zrušiť">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

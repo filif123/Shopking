@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="502.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sk.shopking.CFXMLAkcia">
+   <children>
+      <Label layoutX="25.0" layoutY="14.0" text="Kategória:" />
+      <Button defaultButton="true" layoutX="324.0" layoutY="351.0" mnemonicParsing="false" text="Uložiť" />
+      <Button cancelButton="true" layoutX="416.0" layoutY="351.0" mnemonicParsing="false" text="Zrušiť" />
+      <ListView layoutX="25.0" layoutY="114.0" prefHeight="237.0" prefWidth="225.0" />
+      <Label layoutX="282.0" layoutY="14.0" text="Názov tovaru:" />
+      <TextField disable="true" editable="false" layoutX="284.0" layoutY="46.0" />
+      <Label layoutX="25.0" layoutY="85.0" text="Tovar:" />
+      <ChoiceBox layoutX="25.0" layoutY="46.0" prefHeight="31.0" prefWidth="225.0" />
+      <Label layoutX="280.0" layoutY="189.0" text="Nová cena:" />
+      <TextField layoutX="353.0" layoutY="184.0" prefHeight="31.0" prefWidth="67.0" />
+      <Label layoutX="280.0" layoutY="96.0" text="EAN:" />
+      <TextField disable="true" editable="false" layoutX="354.0" layoutY="91.0" prefHeight="31.0" prefWidth="121.0" />
+      <Label layoutX="435.0" layoutY="189.0" text="€" />
+      <Label layoutX="280.0" layoutY="144.0" text="Stará cena:" />
+      <TextField layoutX="353.0" layoutY="139.0" prefHeight="31.0" prefWidth="67.0" />
+      <Label layoutX="435.0" layoutY="144.0" text="€" />
+      <Label layoutX="281.0" layoutY="239.0" text="Akcia:" />
+      <TextField layoutX="354.0" layoutY="234.0" prefHeight="31.0" prefWidth="67.0" />
+      <Label layoutX="436.0" layoutY="239.0" text="\%" />
+      <Label layoutX="280.0" layoutY="290.0" text="Rozdiel:" />
+      <TextField disable="true" editable="false" layoutX="353.0" layoutY="285.0" prefHeight="31.0" prefWidth="67.0" />
+      <Label layoutX="438.0" layoutY="290.0" text="€" />
+   </children>
+</Pane>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shopking.CFXMLSklad">
+   <children>
+      <BorderPane layoutX="230.0" layoutY="123.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TableView fx:id="jtSklad" editable="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="cNazov" editable="false" minWidth="350.0" prefWidth="405.0" text="Názov tovaru" />
+                <TableColumn prefWidth="230.0" text="Množstvo">
+                     <columns>
+                        <TableColumn fx:id="cMnozstvoSklad" minWidth="20.0" prefWidth="120.0" text="Na sklade" />
+                        <TableColumn fx:id="cMnozstvoPredajna" minWidth="20.0" prefWidth="120.0" text="V predajni" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="cJednotka" editable="false" prefWidth="154.0" text="Jednotka" />
+                  <TableColumn fx:id="cBarcode" editable="false" prefWidth="176.0" text="EAN" />
+              </columns>
+            </TableView>
+         </center>
+         <top>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                  <Button contentDisplay="TOP" minWidth="150.0" mnemonicParsing="false" onAction="#jbRefreshAction" text="Obnoviť" textAlignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/refresh.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="TOP" minWidth="150.0" mnemonicParsing="false" onAction="#jbSearchAction" text="Hľadať">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/search2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="TOP" minWidth="150.0" mnemonicParsing="false" onAction="#jbSaveAction" text="Uložiť" textAlignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/save.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="jbSaveExit" contentDisplay="TOP" minWidth="150.0" mnemonicParsing="false" onAction="#jbSaveExitAction" text="Uložiť a ukončiť" textAlignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/save.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="jbStorno" contentDisplay="TOP" minWidth="150.0" mnemonicParsing="false" onAction="#jbStornoAction" text="Zrušiť" textAlignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/left.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="jbUkoncit" contentDisplay="TOP" minWidth="150.0" mnemonicParsing="false" onAction="#jbUkoncitAction" text="Ukončiť" textAlignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/shutdown.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+              </items>
+            </ToolBar>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

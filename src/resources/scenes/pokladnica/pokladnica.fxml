@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sk.shopking.controllers.CFXMLHomePokladnik">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../styles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <GridPane prefHeight="50.0" style="-fx-background-color: #0066cc;" BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" styleClass="smallLabelsInPokladnica" text="Pokladnica: ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="jlPokladnicaNumber" styleClass="labelsInPokladnica" text="\%poklnum%">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label styleClass="smallLabelsInPokladnica" text="Prihlásený používateľ: ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="jlUser" styleClass="labelsInPokladnica" text="\%user%">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+                     <children>
+                        <Label styleClass="smallLabelsInPokladnica" text="Čas: ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="jlTime" styleClass="labelsInPokladnica" text="\%time%">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3">
+                     <children>
+                        <Label styleClass="smallLabelsInPokladnica" text="Dátum: ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="jlDay" styleClass="labelsInPokladnica" text="\%day%">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="jlDate" styleClass="labelsInPokladnica" text="\%date%">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </top>
+         <center>
+            <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="371.0" style="-fx-background-color: #e6f2ff;">
+                     <children>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <center>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <VBox prefHeight="707.0" prefWidth="537.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Label text="Program">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="20.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="150.0" prefWidth="328.0">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <children>
+                                                <VBox alignment="CENTER" onMouseClicked="#jbVypnutAction" prefHeight="200.0" prefWidth="150.0" style="-fx-background-color: red;" styleClass="hoverPokladnikMenuRed">
+                                                   <children>
+                                                      <Label styleClass="labelsInPokladnica" text="Vypnúť">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Vypnúť program (Alt+F4)" />
+                                                         </tooltip>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER" onMouseClicked="#jbOdhlasitAction" prefHeight="200.0" prefWidth="150.0" style="-fx-background-color: red;" styleClass="hoverPokladnikMenuRed">
+                                                   <children>
+                                                      <Label styleClass="labelsInPokladnica" text="Odhlásiť">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Odhlásiť (Alt+F5)" />
+                                                         </tooltip>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox alignment="CENTER" onMouseClicked="#jbCloseAction" prefHeight="200.0" prefWidth="150.0" style="-fx-background-color: red;" styleClass="hoverPokladnikMenuRed">
+                                                   <children>
+                                                      <Label styleClass="labelsInPokladnica" text="Zatvoriť&#10;pokladnicu" textAlignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Zatvoriť pokladnicu (Alt+F6)" />
+                                                         </tooltip>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <Label text="Pokladnica">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="20.0" top="5.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="150.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox alignment="CENTER" onMouseClicked="#jbStavPokladniceAction" prefHeight="200.0" prefWidth="111.0" style="-fx-background-color: #ff6600;" styleClass="hoverPokladnikMenuOrange">
+                                                   <children>
+                                                      <Label styleClass="labelsInPokladnica" text="Stav&#10;pokladnice" textAlignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Stav pokladnice (S)" />
+                                                         </tooltip>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER" onMouseClicked="#jbPrijemAction" prefHeight="200.0" prefWidth="111.0" style="-fx-background-color: #ff6600;" styleClass="hoverPokladnikMenuOrange">
+                                                   <children>
+                                                      <Label styleClass="labelsInPokladnica" text="Príjem">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Príjem do pokladnice (+)" />
+                                                         </tooltip>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox alignment="CENTER" onMouseClicked="#jbVydajAction" prefHeight="200.0" prefWidth="111.0" style="-fx-background-color: #ff6600;" styleClass="hoverPokladnikMenuOrange">
+                                                   <children>
+                                                      <Label styleClass="labelsInPokladnica" text="Výdaj">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Výdaj z pokladnice (-)" />
+                                                         </tooltip>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox alignment="CENTER" onMouseClicked="#jbUzavierkaAction" prefHeight="200.0" prefWidth="111.0" style="-fx-background-color: #ff6600;" styleClass="hoverPokladnikMenuOrange">
+                                                   <children>
+                                                      <Label styleClass="labelsInPokladnica" text="Uzávierka">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Uzávierka (U)" />
+                                                         </tooltip>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <Label text="Tovar">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="20.0" top="5.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="150.0" prefWidth="328.0">
+                                             <children>
+                                                <VBox alignment="CENTER" onMouseClicked="#jbZoznamAction" prefHeight="200.0" prefWidth="111.0" style="-fx-background-color: #0066cc;" styleClass="hoverPokladnikMenuBlue">
+                                                   <children>
+                                                      <Label styleClass="labelsInPokladnica" text="Zoznam">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Zoznam (L)" />
+                                                         </tooltip>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER" onMouseClicked="#jbEANAction" prefHeight="200.0" prefWidth="111.0" style="-fx-background-color: #0066cc;" styleClass="hoverPokladnikMenuBlue">
+                                                   <children>
+                                                      <Label styleClass="labelsInPokladnica" text="EAN">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Zadať EAN (E)" />
+                                                         </tooltip>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox alignment="CENTER" onMouseClicked="#jbPLUAction" prefHeight="200.0" prefWidth="111.0" style="-fx-background-color: #0066cc;" styleClass="hoverPokladnikMenuBlue">
+                                                   <children>
+                                                      <Label styleClass="labelsInPokladnica" text="PLU">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Zadať PLU (P)" />
+                                                         </tooltip>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox alignment="CENTER" onMouseClicked="#jbScanInfoAction" prefHeight="200.0" prefWidth="111.0" style="-fx-background-color: #0066cc;" styleClass="hoverPokladnikMenuBlue">
+                                                   <children>
+                                                      <Label styleClass="labelsInPokladnica" text="Získať info">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Získať info oskenovaním (I)" />
+                                                         </tooltip>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <Label text="Zadanie">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="20.0" top="5.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="150.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox fx:id="vbMnozstvo" alignment="CENTER" disable="true" onMouseClicked="#jbMnozstvoAction" prefHeight="200.0" prefWidth="230.0" style="-fx-background-color: #996633;" styleClass="hoverPokladnikMenuBrown">
+                                                   <children>
+                                                      <Label styleClass="labelsInPokladnica" text="Zadať množstvo" textAlignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Zadať množstvo (M)" />
+                                                         </tooltip>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <VBox fx:id="vbHmotnost" alignment="CENTER" disable="true" onMouseClicked="#jbHmotnostAction" prefHeight="200.0" prefWidth="225.0" style="-fx-background-color: #996633;" styleClass="hoverPokladnikMenuBrown">
+                                                   <children>
+                                                      <Label styleClass="labelsInPokladnica" text="Zadať hmotnosť" textAlignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Zadať hmotnosť (H)" />
+                                                         </tooltip>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <Label text="Nákup">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="20.0" top="5.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="150.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox alignment="CENTER" onMouseClicked="#jbZrusitNakupAction" prefHeight="200.0" prefWidth="111.0" style="-fx-background-color: #993399;" styleClass="hoverPokladnikMenuViolet">
+                                                   <children>
+                                                      <Label styleClass="labelsInPokladnica" text="Zrušiť&#10;nákup" textAlignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Zrušiť aktuálny nákup (Z)" />
+                                                         </tooltip>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER" onMouseClicked="#jbDeleteItemAction" prefHeight="200.0" prefWidth="111.0" style="-fx-background-color: #993399;" styleClass="hoverPokladnikMenuViolet">
+                                                   <children>
+                                                      <Label styleClass="labelsInPokladnica" text="Zmazať&#10;položku" textAlignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Zmazať položku (Delete)" />
+                                                         </tooltip>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox alignment="CENTER" onMouseClicked="#jbStornoAction" prefHeight="200.0" prefWidth="111.0" style="-fx-background-color: #993399;" styleClass="hoverPokladnikMenuViolet">
+                                                   <children>
+                                                      <Label styleClass="labelsInPokladnica" text="Storno&#10;nákupu" textAlignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Storno nákupu (Q)" />
+                                                         </tooltip>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox alignment="CENTER" onMouseClicked="#jbImportAction" prefHeight="200.0" prefWidth="111.0" style="-fx-background-color: #993399;" styleClass="hoverPokladnikMenuViolet">
+                                                   <children>
+                                                      <Label styleClass="labelsInPokladnica" text="Import&#10;nákupu" textAlignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Import nákupu (T)" />
+                                                         </tooltip>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <Label text="Platba">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="20.0" top="5.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="150.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox fx:id="vbHotovost" alignment="CENTER" onMouseClicked="#jbHotovostAction" prefHeight="200.0" prefWidth="150.0" style="-fx-background-color: green;" styleClass="hoverPokladnikMenuGreen">
+                                                   <children>
+                                                      <Label styleClass="labelsInPokladnica" text="Hotovosť">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Hotovosť (O)" />
+                                                         </tooltip>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER" disable="true" prefHeight="200.0" prefWidth="150.0" style="-fx-background-color: green;" styleClass="hoverPokladnikMenuGreen">
+                                                   <children>
+                                                      <Label styleClass="labelsInPokladnica" text="Karta">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Karta" />
+                                                         </tooltip>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox fx:id="vbStravneListky" alignment="CENTER" onMouseClicked="#jbStravneListkyAction" prefHeight="200.0" prefWidth="150.0" style="-fx-background-color: green;" styleClass="hoverPokladnikMenuGreen">
+                                                   <children>
+                                                      <Label styleClass="labelsInPokladnica" text="Stravné&#10;lístky" textAlignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Stravné lístky (C)" />
+                                                         </tooltip>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <BorderPane.margin>
+                                    <Insets bottom="20.0" />
+                                 </BorderPane.margin>
+                              </AnchorPane>
+                           </center>
+                           <bottom>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #99ccff;" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Label fx:id="jlSuma" text="0,00">
+                                                   <font>
+                                                      <Font name="System Bold" size="96.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <Label text="€">
+                                                   <font>
+                                                      <Font name="System Bold" size="96.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TableView fx:id="jtNakup" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                          <columns>
+                            <TableColumn fx:id="cNazovVyrobku" prefWidth="249.0" text="Názov výrobku" />
+                              <TableColumn fx:id="cPLU" prefWidth="92.0" text="PLU" />
+                              <TableColumn fx:id="cEAN" prefWidth="167.0" text="EAN" />
+                              <TableColumn fx:id="cCena" prefWidth="133.0" text="Cena (€)" />
+                              <TableColumn fx:id="cJednotkovaCena" prefWidth="165.0" text="Jednot. cena (€)" />
+                              <TableColumn fx:id="cDPH" prefWidth="119.0" text="DPH (%)" />
+                              <TableColumn fx:id="cMnozstvo" minWidth="0.0" prefWidth="119.0" text="Množstvo" />
+                              <TableColumn fx:id="cJednotka" prefWidth="115.0" text="Jednotka" />
+                              <TableColumn fx:id="cAkcia" prefWidth="200.0" text="Akcia" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

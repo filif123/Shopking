@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="256"
+   height="64"
+   viewBox="0 0 67.733331 16.933333"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="logo_new.svg"
+   inkscape:export-filename="C:\Users\Filip\git\Shopking\ShopKing\src\resources\images\logo_full.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.15"
+     inkscape:cx="112.53748"
+     inkscape:cy="56.981702"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="false"
+     inkscape:snap-bbox="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     units="px">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4504" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Vrstva 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-280.06669)">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4516"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:'Roboto Bold';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,9.2300499,268.10023)"><flowRegion
+         id="flowRegion4518"
+         style="font-size:42.66666794px"><rect
+           id="rect4520"
+           width="248.72203"
+           height="87.995514"
+           x="-20.203053"
+           y="47.235138"
+           style="font-size:42.66666794px" /></flowRegion><flowPara
+         id="flowPara4522"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:53.33333588px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Bold'"><flowSpan
+           style="font-size:53.33333588px;fill:#0066cc"
+           id="flowSpan4524">Shopking</flowSpan></flowPara></flowRoot>    <path
+       style="fill:#ffcc00;stroke:none;stroke-width:0.12967324;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 3.9699515,286.91367 4.5440099,-4.19743 -2.0794622,-2.27201 -0.3850854,1.77139 H 3.8544257 l -0.077017,2.04095 -2.0024453,0.26957 z"
+       id="path4528"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccc" />
+  </g>
+</svg>

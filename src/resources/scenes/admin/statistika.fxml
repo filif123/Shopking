@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sk.shopking.controllers.CFXMLStatistika">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <fx:include fx:id="homeMenu" source="hlavneMenu.fxml" />
+         </left>
+         <center>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+               <tabs>
+                  <Tab text="Tržby">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane layoutX="175.0" layoutY="272.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <top>
+                                    <ToolBar prefHeight="162.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+                                       <items>
+                                          <BorderPane prefHeight="148.0">
+                                             <bottom>
+                                                <Label styleClass="zahlavieText" text="Súbor" BorderPane.alignment="CENTER">
+                                                   <BorderPane.margin>
+                                                      <Insets />
+                                                   </BorderPane.margin>
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </bottom>
+                                             <center>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="127.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#jbExportTrzbyAction" text="Exportovať" textAlignment="CENTER">
+                                                         <graphic>
+                                                            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../images/icons8-xls-export-100.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <tooltip>
+                                                            <Tooltip text="Exportovať (Ctrl+E)" />
+                                                         </tooltip>
+                                                      </Button>
+                                                      <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#jbObnovitTrzbyAction" text="Obnoviť">
+                                                         <graphic>
+                                                            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../images/icons8-refresh-100.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <tooltip>
+                                                            <Tooltip text="Obnoviť (F5)" />
+                                                         </tooltip>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </center>
+                                          </BorderPane>
+                                          <Separator orientation="VERTICAL" prefHeight="117.0" prefWidth="0.0" />
+                                          <BorderPane prefHeight="152.0">
+                                             <bottom>
+                                                <Label styleClass="zahlavieText" text="Tržby" BorderPane.alignment="CENTER">
+                                                   <BorderPane.margin>
+                                                      <Insets />
+                                                   </BorderPane.margin>
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </bottom>
+                                             <center>
+                                                <VBox alignment="CENTER_LEFT" prefHeight="200.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <RadioButton fx:id="jrbShowDenneTrzby" mnemonicParsing="false" onAction="#jrbShowDenneTrzbyAction" selected="true" text="Zobraziť denné tržby">
+                                                         <VBox.margin>
+                                                            <Insets bottom="10.0" />
+                                                         </VBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="tgTrzby" />
+                                                         </toggleGroup>
+                                                      </RadioButton>
+                                                      <RadioButton fx:id="jrbShowMesacneTrzby" mnemonicParsing="false" onAction="#jrbShowMesacneTrzbyAction" text="Zobraziť mesačné tržby" toggleGroup="$tgTrzby">
+                                                         <VBox.margin>
+                                                            <Insets bottom="10.0" />
+                                                         </VBox.margin>
+                                                      </RadioButton>
+                                                      <RadioButton fx:id="jrbShowRocneTrzby" mnemonicParsing="false" onAction="#jrbShowRocneTrzbyAction" text="Zobraziť ročné tržby" toggleGroup="$tgTrzby" />
+                                                   </children>
+                                                </VBox>
+                                             </center>
+                                          </BorderPane>
+                                          <Separator orientation="VERTICAL" prefHeight="117.0" prefWidth="0.0" />
+                                       </items>
+                                    </ToolBar>
+                                 </top>
+                                 <center>
+                                    <LineChart fx:id="jlchTrzby" legendVisible="false" BorderPane.alignment="CENTER">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                       <BorderPane.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </BorderPane.margin>
+                                    </LineChart>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Predávanosť tovaru">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane layoutX="117.0" layoutY="115.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <top>
+                                    <ToolBar prefHeight="162.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+                                       <items>
+                                          <BorderPane prefHeight="148.0">
+                                             <bottom>
+                                                <Label styleClass="zahlavieText" text="Predávanosť" BorderPane.alignment="CENTER">
+                                                   <BorderPane.margin>
+                                                      <Insets />
+                                                   </BorderPane.margin>
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </bottom>
+                                             <center>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="127.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#jbExportPredajnostAction" text="Exportovať" textAlignment="CENTER">
+                                                         <graphic>
+                                                            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../images/icons8-xls-export-100.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <tooltip>
+                                                            <Tooltip text="Uložiť (Ctrl+S)" />
+                                                         </tooltip>
+                                                      </Button>
+                                                      <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#jbObnovitPredajnostAction" text="Obnoviť">
+                                                         <graphic>
+                                                            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../images/icons8-refresh-100.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <tooltip>
+                                                            <Tooltip text="Obnoviť zmeny (F5)" />
+                                                         </tooltip>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </center>
+                                          </BorderPane>
+                                          <Separator orientation="VERTICAL" prefHeight="117.0" prefWidth="0.0" />
+                                       </items>
+                                    </ToolBar>
+                                 </top>
+                                 <center>
+                                    <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                      <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <TableView fx:id="jtPredajnost" layoutX="68.0" layoutY="94.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <columns>
+                                                    <TableColumn fx:id="cNazov" prefWidth="219.0" text="Názov tovaru" />
+                                                      <TableColumn fx:id="cCena" prefWidth="120.0" text="Cena (€)" />
+                                                      <TableColumn fx:id="cPredajnost" prefWidth="130.0" text="Predajnosť" />
+                                                      <TableColumn fx:id="cJednotka" prefWidth="120.0" text="Jednotka" />
+                                                  </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <LineChart fx:id="jlchPredajnostTovaru" layoutX="29.0" layoutY="78.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <xAxis>
+                                                    <CategoryAxis label="Čas" side="BOTTOM" />
+                                                  </xAxis>
+                                                  <yAxis>
+                                                    <NumberAxis label="Predajnosť" side="LEFT" />
+                                                  </yAxis>
+                                                </LineChart>
+                                             </children>
+                                          </AnchorPane>
+                                      </items>
+                                       <BorderPane.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </BorderPane.margin>
+                                    </SplitPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

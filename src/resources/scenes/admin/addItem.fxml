@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="423.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sk.shopking.controllers.CFXMLAddTovar">
+   <children>
+      <Label layoutX="23.0" layoutY="30.0" text="Názov tovaru:" />
+      <Label layoutX="323.0" layoutY="126.0" text="Obrázok:" />
+      <Button layoutX="419.0" layoutY="121.0" mnemonicParsing="false" onAction="#jbPrehladavatAction" text="Prehľadávať" />
+      <TextField fx:id="jtTovarName" layoutX="146.0" layoutY="21.0" prefHeight="31.0" prefWidth="421.0" />
+      <ImageView fx:id="jiIcon" fitHeight="170.0" fitWidth="237.0" layoutX="312.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true" />
+      <Button defaultButton="true" layoutX="105.0" layoutY="378.0" mnemonicParsing="false" onAction="#jbSaveAction" text="Uložiť" />
+      <Button cancelButton="true" layoutX="431.0" layoutY="378.0" mnemonicParsing="false" onAction="#jbStornoAction" text="Zrušiť" />
+      <Button layoutX="205.0" layoutY="378.0" mnemonicParsing="false" onAction="#jbSaveNewAction" text="Uložiť a pridať ďalší tovar" />
+      <Label layoutX="23.0" layoutY="76.0" text="Kategória tovaru:" />
+      <ChoiceBox fx:id="jcCategory" layoutX="148.0" layoutY="71.0" prefHeight="31.0" prefWidth="237.0" />
+      <Label layoutX="22.0" layoutY="126.0" text="EAN:" />
+      <TextField fx:id="jtBarcode" layoutX="69.0" layoutY="121.0" prefHeight="31.0" prefWidth="205.0" />
+      <Label layoutX="20.0" layoutY="255.0" text="Cena tovaru:" />
+      <TextField fx:id="jtCena" layoutX="127.0" layoutY="250.0" prefHeight="31.0" prefWidth="83.0" />
+      <Label layoutX="217.0" layoutY="255.0" text="€" />
+      <Button layoutX="115.0" layoutY="165.0" mnemonicParsing="false" text="Naskenovať" />
+      <Label layoutX="22.0" layoutY="296.0" text="DPH:" />
+      <Label layoutX="215.0" layoutY="296.0" text="\%" />
+      <Label layoutX="406.0" layoutY="76.0" text="Jednotka:" />
+      <ChoiceBox fx:id="jcJednotka" layoutX="482.0" layoutY="71.0" prefHeight="31.0" prefWidth="83.0" />
+      <Label layoutX="20.0" layoutY="340.0" text="Cena bez DPH:" />
+      <TextField fx:id="jtCenaBezDPH" disable="true" editable="false" layoutX="127.0" layoutY="335.0" prefHeight="31.0" prefWidth="83.0" />
+      <Label layoutX="214.0" layoutY="340.0" text="€" />
+      <ChoiceBox fx:id="jcDPH" layoutX="127.0" layoutY="291.0" prefHeight="31.0" prefWidth="83.0" />
+      <Separator layoutX="296.0" layoutY="118.0" orientation="VERTICAL" prefHeight="238.0" prefWidth="8.0" />
+      <Label layoutX="22.0" layoutY="212.0" text="Kód tovaru:" />
+      <TextField layoutX="127.0" layoutY="207.0" prefHeight="31.0" prefWidth="83.0" />
+   </children>
+</Pane>

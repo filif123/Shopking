@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="ShopKing.jnlp">
+  <information>
+    <title>ShopKing</title>
+    <vendor>sk.shopking</vendor>
+    <description>Shopking</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="ShopKing.jar" size="754629" download="eager" />
+    <jar href="libs\jSerialComm-2.5.2.jar" size="379549" download="eager" />
+    <jar href="libs\jmetro-8.5.10-javadoc.jar" size="59910" download="eager" />
+    <jar href="libs\jmetro-8.5.10.jar" size="67378" download="eager" />
+    <jar href="libs\mysqlconnector.jar" size="540852" download="eager" />
+  </resources>
+  <jfx:javafx-desc width="0" height="0" main-class="sk.shopking.installer.ShopKingInstaller" name="Shopking" />
+  <update check="background"/>
+</jnlp>

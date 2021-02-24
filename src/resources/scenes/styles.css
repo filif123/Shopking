@@ -1,0 +1,91 @@
+.hoverButton:hover{
+	-fx-background-color: #000099;
+}
+
+.textInHlavneMenu{
+	-fx-font-family: System !important;
+    -fx-font-size: 24 !important;
+	-fx-text-fill:white;
+}	
+	
+/* Menu pokladnik */
+.hoverPokladnikMenuRed:hover{
+	-fx-background-color: derive(red,-20%) !important;
+}
+
+.hoverPokladnikMenuOrange:hover{
+	-fx-background-color: derive(#ff6600,-20%) !important;
+}
+
+.hoverPokladnikMenuBlue:hover{
+	-fx-background-color: derive( #0066cc,-20%) !important;
+}
+
+.hoverPokladnikMenuViolet:hover{
+	-fx-background-color: derive(#993399,-20%) !important;
+}
+
+.hoverPokladnikMenuGreen:hover{
+	-fx-background-color: derive(green,-20%) !important;
+}
+
+.hoverPokladnikMenuBrown:hover{
+	-fx-background-color: derive(#996633,-20%) !important;
+}
+
+/* White Label */
+.whiteLabel{
+	-fx-text-fill:white;
+	-fx-font-family: System;
+    -fx-font-size: 48;
+}
+
+.labelsInPokladnica{
+	-fx-text-fill:white;
+	-fx-font-weight: bold;
+	-fx-font-size: 18;
+}
+
+.smallLabelsInPokladnica{
+	-fx-text-fill:white;
+}	
+
+/* Black Label */
+.blackLabel{
+	-fx-text-fill:black;
+	-fx-font-family: System;
+    -fx-font-size: 48;
+}
+
+.hoverButtonHome:hover{
+	-fx-background-color:  #0066cc !important;
+}
+
+.hoverButtonHome:hover .blackLabel{
+	-fx-text-fill:white;
+}
+
+.textArea{
+    -fx-font-family: "Courier New" !important;
+    -fx-font-size: 15;
+}
+
+.textFieldWithoutButton{
+	-right-button-visible: false;
+}
+
+.textInInformation{
+	-fx-font-weight: bold !important;
+	-fx-font-family: System !important;
+	-fx-font-size: 36 !important;
+}
+
+.zahlavieText{
+	-fx-font-size: 12;
+}
+
+.textCeny{
+	-fx-font-weight: bold;
+	-fx-font-family: System;
+	-fx-font-size: 24;
+}	

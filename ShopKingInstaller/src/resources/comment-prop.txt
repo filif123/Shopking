@@ -1,0 +1,25 @@
+Toto je konfiguracny subor programu Shopking v1.0.0
+-------------------------------------------------------------
+Vysvetlivky:
+-cash_registers_auto_refresh:
+	> udava, po kolkych sekundach ma aktualizovat zoznam pokladnic
+	> default: 20
+
+-scanner_port:
+	> port, na ktorom sa ma nachadzat citacka ciarovych kodov
+	> default: <prazdne>
+
+-receipt_path:
+	> adresa k priecinku, do ktoreho sa maju ukladat pokladnicne bloky
+	> default: <prazdne>
+
+-ip:
+	> ip adresa k SQL serveru
+	> default: <bez predvolenej hodnoty>
+	> *povinne uviest*
+	> povolene hodnoty: IPv4 adresa (X.X.X.X) alebo "localhost"
+
+-register_num:
+	> identifikacne cislo tejto pokladnice
+	> default: 0 - tzn. PC nie je pokladnica
+-------------------------------------------------------------
